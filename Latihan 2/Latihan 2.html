@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device width, initial scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+        <script>
+            function openSlideMenu(){
+              document.getElementById('menu').style.width = '250px';
+              document.getElementById('content').style.marginLeft = '250px';
+            }
+            function closeSlideMenu(){
+              document.getElementById('menu').style.width = '0';
+              document.getElementById('content').style.marginLeft = '0';
+            }
+        </script>
+        <title>Web</title>
+
+        <style>
+            .nav {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #111;
+                opacity: .9;
+                overflow-x: hidden;
+                padding-top: 60px;
+                transition: 0.7s;
+            }
+            .nav a {
+                display: block;
+                padding: 20px 30px;
+                font-size: 25px;
+                text-decoration: none;
+                color: #ccc;
+            }
+            .nav a:hover {
+                color: #fff;
+                transition: 0.4s;
+            }
+            .nav .close {
+                position: absolute;
+                top: 0;
+                right: 22px;
+                margin-left: 50px;
+                font-size: 30px
+            }
+            .slide a {
+                color: #000;
+                font-size: 36px;
+            }
+            #content {
+                padding: 20px;
+                transition: margin-left 0.7s;
+                overflow: hidden;
+                width: 100%;
+            }
+            .container {
+                width: 800px;
+                height: 1500px;
+                border: 2px solid black;
+                margin-left: 200px;
+            }
+
+            .button1 {
+                background-color: #f44336;
+                border: none;
+                color: white;
+                padding: 10px 24px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                border-radius: 8px;
+                padding: 10px;
+            }
+
+            .button1:hover {
+            background-color: white;
+            color: black;
+            }
+
+            .button2 {
+                background-color: #f44336;
+                border: none;
+                color: white;
+                padding: 10px 24px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                border-radius: 8px;
+                margin-top: 9px;
+                padding: 10px;
+            }
+
+            .button2:hover {
+            background-color: white;
+            color: black;
+            }
+
+            .kotaks{
+                background-color:yellowgreen;
+                height: 90px;
+                width: 140px;
+                border-radius: 7px;
+                position: fixed;
+                padding: 10px;
+                left: 1200px;
+            }
+
+            .ribbon{
+                background-image: url(TWIT.png);
+                width: 150px;
+                height: 150px;
+                margin-top: -18px;
+                margin-left: 670px;
+                float: right ;
+                position: absolute;
+                background-size: cover;
+            }
+
+            .kotak{
+                background-color:red;
+                opacity: 0.52;
+                width: 195px;
+                border-radius: 7px;
+            }
+
+            .judul {
+                padding-left: 20px;
+                border-bottom: 2px solid black;
+            }
+
+            .judul h1 {
+                text-shadow: 3px 2px firebrick;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .menu {
+                padding: 10px 5px 10px 20px;
+                border-bottom: 2px solid black;
+            }
+
+            .menu a {
+                text-decoration: none;
+                color: firebrick;
+            }
+
+            .menu a:hover {
+                text-decoration: none;
+                color: gold;
+            }
+
+            .banner {
+                background-color: orangered;
+                width: auto;
+                height: 300px;
+                background-image: url(02_desktop.jpg);
+                background-size: cover;
+                border-bottom: 2px solid black;
+            }
+
+            .judulartikel {
+                padding-left: 20px;
+            }
+
+            .konten {
+                width: auto;
+                height: 400px;
+                padding-top: 5px;
+                padding-left: 20px;
+                padding-right: 10px;
+                overflow: auto;
+                background-color: white;
+            }
+
+            .konten img {
+                width: 200px;
+                height: 200px;
+                padding-right: 20px;
+                float: left;
+            }
+
+            .gallery {
+                margin: 5px 5px 5px 5px;
+                width: 190px;
+                height: 100px;
+                background-color: coral;
+                float: left;
+                background-image: url(we.png);
+                background-size: cover;
+            }
+            
+            .cobaevent {
+                background-color:yellowgreen;
+                height: 90px;
+                width: 140px;
+                border-radius: 7px;
+                float: left;
+            }
+
+            .cobaevent1 {
+                background-color:blueviolet;
+                height: 90px;
+                width: 140px;
+                border-radius: 7px;
+                float: left;
+            }
+
+            .cobaevent2 {
+                background-color:yellowgreen;
+                height: 90px;
+                width: 140px;
+                border-radius: 7px;
+                float: left;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="content">
+
+            <span class="slide">
+              <a href="#" onclick="openSlideMenu()">
+                <i class="fas fa-bars"></i>
+              </a>
+            </span>
+        
+            <div id="menu" class="nav">
+              <a href="#" class="close" onclick="closeSlideMenu()">
+                <i class="fas fa-times"></i>
+              </a>
+              <a href="#">Home</a>
+              <a href="#">About</a>
+              <a href="#">Services</a>
+              <a href="#">Portfolio</a>
+              <a href="#">Contact</a>
+            </div>
+        <!-- <div class="kotaks">
+            <center>
+            <button type="button1" class="button1" onClick="ubahwarna_dark()">Mode Malam</button>
+            <button type="button2" class="button2" onClick="ubahwarna_light()">Mode Siang</button>
+            </center>    
+        </div>
+
+        <div class="kotaks2"></div> -->
+
+        <div class="container">
+            <div class="ribbon"></div>
+            <div class="judul">
+                <div class="kotak"><h1>Website Kita</h1></div>
+            </div>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">Profil</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="banner">
+
+            </div>
+            <div class="judulartikel">
+                <h2>Judul Artikel</h2>
+                <p>Ditulis oleh Hamba Allah</p>
+            </div>
+            <div class="konten" id="konten">
+                <img src="we.png">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum magni quia debitis nihil, eligendi suscipit quos ad nisi inventore laborum explicabo minus deserunt, quae temporibus quidem dolor, quo dolorum ipsam!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum magni quia debitis nihil, eligendi suscipit quos ad nisi inventore laborum explicabo minus deserunt, quae temporibus quidem dolor, quo dolorum ipsam!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum magni quia debitis nihil, eligendi suscipit quos ad nisi inventore laborum explicabo minus deserunt, quae temporibus quidem dolor, quo dolorum ipsam!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum magni quia debitis nihil, eligendi suscipit quos ad nisi inventore laborum explicabo minus deserunt, quae temporibus quidem dolor, quo dolorum ipsam!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum magni quia debitis nihil, eligendi suscipit quos ad nisi inventore laborum explicabo minus deserunt, quae temporibus quidem dolor, quo dolorum ipsam!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum magni quia debitis nihil, eligendi suscipit quos ad nisi inventore laborum explicabo minus deserunt, quae temporibus quidem dolor, quo dolorum ipsam!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum magni quia debitis nihil, eligendi suscipit quos ad nisi inventore laborum explicabo minus deserunt, quae temporibus quidem dolor, quo dolorum ipsam!</p>
+            </div>
+            <div class="gallery">
+                1
+            </div>
+            <div class="gallery">
+                2
+            </div>
+            <div class="gallery">
+                3
+            </div>
+            <div class="gallery">
+                4
+            </div>
+            <div class="gallery">
+                5
+            </div>
+            <div class="gallery">
+                6
+            </div>
+            <div class="gallery">
+                7
+            </div>
+            <div class="gallery">
+                8
+            </div>
+        </div>
+        <script>
+            function ubahwarna_dark(){
+                document.getElementById('konten').style.backgroundColor="black";
+                document.getElementById('konten').style.color="white";
+            }
+
+            function ubahwarna_light(){
+                document.getElementById('konten').style.backgroundColor="white";
+                document.getElementById('konten').style.color="black";
+            }
+
+            function divkelakuan(){
+                document.getElementById('cobaeventku').className="cobaevent1";
+            }
+
+            function divkelakuan1(){
+                document.getElementById('cobaeventku').className="cobaevent2";
+            }
+
+
+        </script>
+    </body>
+</html>
